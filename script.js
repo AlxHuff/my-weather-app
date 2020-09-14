@@ -1,5 +1,3 @@
-import "style.css";
-
 /// DEFINED FUNCTIONS ///
 
 /// START SEARCH ENGINE ///
