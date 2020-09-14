@@ -27,13 +27,14 @@
         <a class="navbar-brand" style="color: #05e1a6; font-size: 30px"
           >Borealis Weather</a
         >
-        <form class="form-inline">
+        <form class="form-inline" id="search-form">
           <input
             class="form-control mr-sm-2"
             type="search"
             placeholder="New City"
             aria-label="Search"
             style="background-color: #343a40; border: 2px solid #495057"
+            id="search-text"
           />
           <button
             class="btn btn-outline-success my-2 my-sm-0"
@@ -47,34 +48,46 @@
       <!--END NAV BAR-->
       <br />
       <br />
-      <!--START HEADER-->
+      <!--START CARD HEADER-->
       <header>
         <div class="card-main-mb-3" style="max-width: 540px">
           <div class="row no-gutters">
             <div class="col-md-4">
               <i
-                class="fas fa-sun"
-                style="font-size: 150px; color: #05e1a6; padding-left: 25px"
+                class="fas fa-city"
+                style="font-size: 100px; color: #05e1a6; padding-left: 25px"
               ></i>
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <h5 class="card-title">
-                  <span style="font-size: 40px">85°</span> in Melbourne, FL
+                <!-- START DATE HEADER -->
+                <h2>Day 00:00</h2>
+                <!-- END DATE HEADER -->
+                <br />
+                <h5 id="city" class="card-title">
+                  <span id="temperature"></span> Please search <br />
+                  for a city.
                 </h5>
+                <p id="temperature-description" class="card-text"></p>
+                <div id="location-button">
+                  <button
+                    id="geo-button"
+                    class="btn btn-outline-success my-2 my-sm-0"
+                    type="click"
+                    style="border: 1px solid #05e1a6; color: #05e1a6"
+                  >
+                    Get Your Current Location
+                  </button>
+                </div>
                 <p class="card-text">
-                  Moderate to heavy showers will continue into tonight along and
-                  north of Interstate 4.
-                </p>
-                <p class="card-text">
-                  <small class="text-muted">Last updated 3 mins ago</small>
+                  <small id="text-muted"></small>
                 </p>
               </div>
             </div>
           </div>
         </div>
       </header>
-      <!-- END HEADER-->
+      <!-- END CARD HEADER-->
       <br />
       <!--START WEEKDAY CARD ROW 1-->
       <div class="row">
@@ -211,7 +224,7 @@
       <!--END WEEKDAY CARD ROW 2-->
       <br />
       <br />
+      <script src="script.js"></script>
     </div>
-    <script src="script.js"></script>
   </body>
 </html>
