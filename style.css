@@ -77,7 +77,7 @@ p {
   box-shadow: inset 24px 24px 48px #2b3035, inset -24px -24px 48px #3d444b;
   color: #05e1a6;
 }
-.github-link {
+a.github-link {
   text-decoration: none;
   text-align: center;
   color: #05e1a6;
