@@ -1,4 +1,42 @@
-h1 {
+.main-body {
+  background-color: #343a40;
+}
+
+button:hover {
+  background-color: #05e1a6 !important ;
+  color: beige !important;
+}
+
+.card-main-mb-3 {
+  border-radius: 50px;
+  background: #343a40;
+  box-shadow: -20px -20px 31px #2c3136, 20px 20px 31px #3c434a;
+  display: block;
+  margin: 0 auto;
+  color: #0ecc99;
+}
+
+.fa-sun {
   text-align: center;
-  color: blueviolet;
+  display: block;
+  margin: 0 auto;
+  padding-top: 45px;
+}
+
+.card-title {
+  color: #05e1a6;
+}
+.card-main {
+  border: 1px solid #343a40;
+  border-radius: 50px;
+  background: #343a40;
+  box-shadow: -20px -20px 31px #2c3136, 20px 20px 31px #3c434a;
+  color: #6c757d;
+  text-align: center;
+}
+.card-main:hover {
+  border-radius: 50px;
+  background: #343a40;
+  box-shadow: inset 24px 24px 48px #2b3035, inset -24px -24px 48px #3d444b;
+  color: #05e1a6;
 }

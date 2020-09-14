@@ -4,10 +4,214 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="SRC\STYLESHEET.css" />
+    <script
+      src="https://kit.fontawesome.com/9ae58007d1.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body>
-      <h1>hosted by <link rel="stylesheet" href="https://www.netlify.com/"> Netlify</link></h1>
-    <script src="script.js"></script>
+  <body class="main-body">
+    <div class="container">
+      <!--NAV BAR-->
+      <nav
+        class="navbar navbar-dark bg-dark justify-content-between"
+        style="background-color: #343a40"
+      >
+        <a class="navbar-brand" style="color: #05e1a6; font-size: 30px"
+          >Borealis Weather</a
+        >
+        <form class="form-inline">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="New City"
+            aria-label="Search"
+            style="background-color: #343a40; border: 2px solid #495057"
+          />
+          <button
+            class="btn btn-outline-success my-2 my-sm-0"
+            type="submit"
+            style="border: 1px solid #05e1a6; color: #05e1a6"
+          >
+            Search
+          </button>
+        </form>
+      </nav>
+      <!--END NAV BAR-->
+      <br />
+      <br />
+      <!--START HEADER-->
+      <header>
+        <div class="card-main-mb-3" style="max-width: 540px">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <i
+                class="fas fa-sun"
+                style="font-size: 150px; color: #05e1a6; padding-left: 25px"
+              ></i>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <span style="font-size: 40px">85°</span> in Melbourne, FL
+                </h5>
+                <p class="card-text">
+                  Moderate to heavy showers will continue into tonight along and
+                  north of Interstate 4.
+                </p>
+                <p class="card-text">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- END HEADER-->
+      <br />
+      <!--START WEEKDAY CARD ROW 1-->
+      <div class="row">
+        <!--MONDAY-->
+        <div class="col">
+          <div class="card-main" style="width: 18rem">
+            <i
+              class="fas fa-sun"
+              style="
+                font-size: 100px;
+                text-align: center;
+                display: block;
+                margin: 0 auto;
+                padding-top: 25px;
+              "
+            ></i>
+            <div class="card-body">
+              <p class="card-text">
+                <span style="font-size: 25px">90°</span> MONDAY
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--TUESDAY-->
+        <div class="col">
+          <div class="card-main" style="width: 18rem">
+            <i
+              class="fas fa-sun"
+              style="
+                font-size: 100px;
+                text-align: center;
+                display: block;
+                margin: 0 auto;
+                padding-top: 25px;
+              "
+            ></i>
+            <div class="card-body">
+              <p class="card-text">
+                <span style="font-size: 25px">95°</span> TUESDAY
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- END TUESDAY-->
+        <!--WEDNESDAY-->
+        <div class="col">
+          <div class="card-main" style="width: 18rem">
+            <i
+              class="fas fa-cloud-rain"
+              style="
+                font-size: 100px;
+                text-align: center;
+                display: block;
+                margin: 0 auto;
+                padding-top: 25px;
+              "
+            ></i>
+            <div class="card-body">
+              <p class="card-text">
+                <span style="font-size: 25px">73°</span> WEDNESDAY
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- END WEDNESDAY-->
+      </div>
+      <!--END WEEKDAY CARD ROW 1-->
+      <br />
+      <!--START WEEKDAY CARD ROW 2-->
+      <div class="row">
+        <!--THURSDAY-->
+        <div class="col">
+          <div class="card-main" style="width: 18rem">
+            <i
+              class="fas fa-cloud-sun-rain"
+              style="
+                font-size: 100px;
+                text-align: center;
+                display: block;
+                margin: 0 auto;
+                padding-top: 25px;
+              "
+            ></i>
+            <div class="card-body">
+              <p class="card-text">
+                <span style="font-size: 25px">85°</span> THURSDAY
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--FRIDAY-->
+        <div class="col">
+          <div class="card-main" style="width: 18rem">
+            <i
+              class="fas fa-cloud-rain"
+              style="
+                font-size: 100px;
+                text-align: center;
+                display: block;
+                margin: 0 auto;
+                padding-top: 25px;
+              "
+            ></i>
+            <div class="card-body">
+              <p class="card-text">
+                <span style="font-size: 25px">88°</span> FRIDAY
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- END FRIDAY-->
+        <!--SATURDAY-->
+        <div class="col">
+          <div class="card-main" style="width: 18rem">
+            <i
+              class="fas fa-cloud-sun-rain"
+              style="
+                font-size: 100px;
+                text-align: center;
+                display: block;
+                margin: 0 auto;
+                padding-top: 25px;
+              "
+            ></i>
+            <div class="card-body">
+              <p class="card-text">
+                <span style="font-size: 25px">90°</span> SATURDAY
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- END SATURDAY-->
+      </div>
+      <!--END WEEKDAY CARD ROW 2-->
+      <br />
+      <br />
+    </div>
+    <script src="SRC\weatherjs.js"></script>
   </body>
 </html>
