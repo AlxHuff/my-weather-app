@@ -7,6 +7,14 @@ button:hover {
   color: beige !important;
 }
 
+h2 {
+  color: #6c757d;
+  font-size: 25px;
+  text-align: left;
+  margin: 0 auto;
+  padding: 10px 10px 0px 10px;
+}
+
 .card-main-mb-3 {
   border-radius: 50px;
   background: #343a40;
@@ -16,16 +24,45 @@ button:hover {
   color: #0ecc99;
 }
 
-.fa-sun {
+div.col-md-4 {
+  padding-top: 20px;
+  padding-right: 20px !important;
+  padding-bottom: 20px !important;
+  padding-left: 20px !important;
+}
+
+.fa-city {
   text-align: center;
   display: block;
   margin: 0 auto;
-  padding-top: 45px;
+  padding-right: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .card-title {
   color: #05e1a6;
+  font-size: 30px;
+  padding: 0px 10px 10px 10px;
+  margin: 0 auto;
 }
+p {
+  padding: 5px 10px;
+  margin: 0 auto;
+  text-transform: capitalize;
+}
+
+#location-button {
+  padding: 10px;
+  margin: 0 auto;
+  display: block;
+}
+
+#text-muted {
+  text-decoration: none;
+  color: #6c757d;
+}
+
 .card-main {
   border: 1px solid #343a40;
   border-radius: 50px;
