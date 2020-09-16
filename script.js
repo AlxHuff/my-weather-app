@@ -23,13 +23,22 @@ function searchCity(city) {
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let temp = document.querySelector("span");
-  temp.innerHTML = temperature;
   let h5 = document.querySelector("h5");
   let city = response.data.name;
   let tempDescription = response.data.weather[0].description;
-  h5.innerHTML = `${temperature}°C in ${city}`;
   let description = document.querySelector("p");
+  let iconElement = document.querySelector("#main-icon");
+  temp.innerHTML = temperature;
+  h5.innerHTML = `${temperature}°C in ${city}`;
   description.innerHTML = tempDescription;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute(
+    "alt",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`
+  );
 }
 /// END SEARCH ENGINE ///
 

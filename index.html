@@ -18,28 +18,25 @@
     ></script>
   </head>
   <body>
-    <div class="container" id="main-body">
+    <div class="container">
       <!--NAV BAR-->
       <nav
         class="navbar navbar-dark bg-dark justify-content-between"
-        style="background-color: #343a40"
+        id="nav-bar"
       >
-        <a class="navbar-brand" style="color: #05e1a6; font-size: 30px"
-          >Borealis Weather</a
-        >
+        <a class="navbar-brand" id="nav-bar-logo">Astraios Weather</a>
         <form class="form-inline" id="search-form">
           <input
             class="form-control mr-sm-2"
             type="search"
             placeholder="New City"
             aria-label="Search"
-            style="background-color: #343a40; border: 2px solid #495057"
             id="search-text"
           />
           <button
             class="btn btn-outline-success my-2 my-sm-0"
             type="submit"
-            style="border: 1px solid #05e1a6; color: #05e1a6"
+            id="searchbar-button"
           >
             Search
           </button>
@@ -50,38 +47,43 @@
       <br />
       <!--START CARD HEADER-->
       <header>
-        <div class="card-main-mb-3" style="max-width: 540px">
-          <div class="row no-gutters">
-            <div class="col-md-4">
-              <i
-                class="fas fa-city"
-                style="font-size: 100px; color: #05e1a6; padding-left: 25px"
-              ></i>
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <!-- START DATE HEADER -->
-                <h2>Day 00:00</h2>
-                <!-- END DATE HEADER -->
-                <br />
-                <h5 id="city" class="card-title">
-                  <span id="temperature"></span> Please search <br />
-                  for a city.
-                </h5>
-                <p id="temperature-description" class="card-text"></p>
-                <div id="location-button">
-                  <button
-                    id="geo-button"
-                    class="btn btn-outline-success my-2 my-sm-0"
-                    type="click"
-                    style="border: 1px solid #05e1a6; color: #05e1a6"
-                  >
-                    Get Your Current Location
-                  </button>
+        <div class="row">
+          <div class="horoscope" style="font-size: 20px; color: white">
+            Today's horoscope
+          </div>
+          <div class="card-main-mb-3" style="max-width: 540px">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img
+                  src="http://openweathermap.org/img/wn/10d@2x.png"
+                  id="main-icon"
+                  alt="weather-icon"
+                />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <!-- START DATE HEADER -->
+                  <h2>Day 00:00</h2>
+                  <!-- END DATE HEADER -->
+                  <br />
+                  <h5 id="city" class="card-title">
+                    <span id="temperature"></span> Please search <br />
+                    for a city.
+                  </h5>
+                  <p id="temperature-description" class="card-text"></p>
+                  <div id="location-button">
+                    <button
+                      id="geo-button"
+                      class="btn btn-outline-success my-2 my-sm-0"
+                      type="click"
+                    >
+                      Get Your Current Location
+                    </button>
+                  </div>
+                  <p class="card-text">
+                    <small id="text-muted"></small>
+                  </p>
                 </div>
-                <p class="card-text">
-                  <small id="text-muted"></small>
-                </p>
               </div>
             </div>
           </div>
