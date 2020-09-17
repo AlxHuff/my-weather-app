@@ -45,44 +45,48 @@
       <!--END NAV BAR-->
       <br />
       <br />
-      <!--START CARD HEADER-->
       <table>
-      <tr><header class="main-card-container">
+      <tr>
+      <header class="main-card-container">
+        <!--START HOROSCOPE HEADER-->
         <td id="horoscope-card"><div class="horoscope">
-            <h1>Today's Horoscope:</h1>
+            <h1>Today's Horoscope</h1>
+            <h2 id="date-time">Day 00:00</h2>
             <br>
             <p class="horoscope-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h2>
         </div></td>
-        <td id="header-card"><div class="main-card">
-        <ul>
-          <li><h1 id="city-name">Tokyo</h1></li>
-          <li><h2 id="date-time">Day 00:00</h2></li>
-          <li><p id="temperature-description">sunny</p></li>
-        </ul>
-        <div class="row">
-            <div class="col-6">
-                <img
-                src="http://openweathermap.org/img/wn/10d@2x.png"
-                id="main-icon"
-                alt="weather-icon"
-              />
-              90°C | °F
-            </div>
-            <div class="col-6">
-                <ul>
-                    <li>Precipitation: 0%</li>
-                    <li>Humidity: 0%</li>
-                    <li>Wind: 9km/hr</li>
-                </ul>
-            </div>
-            </div class="row">
-        </div></td>
-       
+        <!--START CARD HEADER-->
+        <td id="header-card">
+        <div class="main-card">
+        <h1 id="city-name">Mars</h1>    
+        <!--START WEATHER TEMP-->
+    <div class="col temp-and-icon">
+        <div class="clearfix"> 
+        <img src="http://openweathermap.org/img/wn/10d@2x.png"
+        id="main-icon"
+        alt="weather-icon"/>
+        <span id="weather-temperature">90°</span> C | °F
+    </div>
+     <!--START LIST #2-->
+ <div class="col" id="details">
+    <ul id="temperature-details">
+      <li>Precipitation: 0%</li>
+      <li>Humidity: 0%</li>
+      <li>Wind: 9km/hr</li>
+    </ul>
+</div> 
+      <!--END LIST #2-->
+</div>  
+       <!--END WEATHER TEMP-->
+    </div>
+    </td>
       </header>
     </tr>
     </table>
-      <!-- END CARD HEADER-->
+      <!-- END HEADER-->
       <br />
+
+
       <!--START WEEKDAY CARD ROW 1-->
       <div class="row">
         <!--MONDAY-->
