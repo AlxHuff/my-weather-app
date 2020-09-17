@@ -5,6 +5,81 @@ body {
   background-size: cover;
   background-color: black;
 }
+ul {
+  margin: 0;
+  padding: 0px;
+}
+
+li {
+  list-style: none;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 19px;
+}
+
+h1 {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 34px;
+  font-weight: 400;
+  text-align: left;
+  margin: 0 auto;
+}
+
+h2 {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 20px;
+  text-align: left;
+  margin: 0 auto;
+}
+
+h4 {
+  font-size: 60px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+p {
+  padding: 5px 10px;
+  margin: 0 auto;
+  text-transform: capitalize;
+}
+
+a {
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+button:hover {
+  background-color: #e24b1e !important;
+  color: whitesmoke !important;
+}
+
+td#horoscope-card {
+  max-width: 500px;
+  padding: 20px;
+}
+
+p.horoscope-p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+  margin: 0 auto;
+  padding: 0px;
+  padding-right: 50px;
+}
+
+td.header-card {
+  max-width: 500px;
+}
+
+.container {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
 
 #nav-bar {
   background-color: transparent !important;
@@ -27,51 +102,25 @@ body {
   color: whitesmoke !important;
 }
 
-button:hover {
-  background-color: #e24b1e !important;
-  color: whitesmoke !important;
-}
-
-h2 {
-  color: rgba(255, 255, 255, 0.4);
-  font-size: 25px;
-  text-align: left;
-  margin: 0 auto;
-  padding: 10px 10px 0px 10px;
-}
-
-.horoscope {
+.main-card {
+  max-width: 600px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50px;
   padding: 20px;
 }
 
-.card-main-mb-3 {
-  border-radius: 50px;
-  background: transparent;
+#temperature-description {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-weight: 400;
   margin: 0 auto;
-  color: rgba(255, 255, 255, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 0px;
 }
 
 #main-icon {
   font-size: 100px;
   color: #e24b1e;
-  padding-left: 25px;
-}
-
-div.col-md-4 {
-  padding-top: 20px;
-  padding-right: 20px !important;
-  padding-bottom: 20px !important;
-  padding-left: 20px !important;
-}
-
-.fa-city {
-  text-align: center;
-  display: block;
   margin: 0 auto;
-  padding-right: 40px;
-  padding-top: 40px;
-  padding-bottom: 40px;
 }
 
 .card-title {
@@ -79,11 +128,6 @@ div.col-md-4 {
   font-size: 30px;
   padding: 0px 10px 10px 10px;
   margin: 0 auto;
-}
-p {
-  padding: 5px 10px;
-  margin: 0 auto;
-  text-transform: capitalize;
 }
 
 #location-button {
@@ -108,11 +152,4 @@ p {
   background: transparent;
   color: #6c757d;
   text-align: center;
-}
-
-a {
-  text-decoration: none;
-  text-align: center;
-  display: block;
-  color: rgba(255, 255, 255, 0.4);
 }

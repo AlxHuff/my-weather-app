@@ -46,49 +46,41 @@
       <br />
       <br />
       <!--START CARD HEADER-->
-      <header>
+      <table>
+      <tr><header class="main-card-container">
+        <td id="horoscope-card"><div class="horoscope">
+            <h1>Today's Horoscope:</h1>
+            <br>
+            <p class="horoscope-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h2>
+        </div></td>
+        <td id="header-card"><div class="main-card">
+        <ul>
+          <li><h1 id="city-name">Tokyo</h1></li>
+          <li><h2 id="date-time">Day 00:00</h2></li>
+          <li><p id="temperature-description">sunny</p></li>
+        </ul>
         <div class="row">
-          <div class="horoscope" style="font-size: 20px; color: white">
-            Today's horoscope
-          </div>
-          <div class="card-main-mb-3" style="max-width: 540px">
-            <div class="row no-gutters">
-              <div class="col-md-4">
+            <div class="col-6">
                 <img
-                  src="http://openweathermap.org/img/wn/10d@2x.png"
-                  id="main-icon"
-                  alt="weather-icon"
-                />
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <!-- START DATE HEADER -->
-                  <h2>Day 00:00</h2>
-                  <!-- END DATE HEADER -->
-                  <br />
-                  <h5 id="city" class="card-title">
-                    <span id="temperature"></span> Please search <br />
-                    for a city.
-                  </h5>
-                  <p id="temperature-description" class="card-text"></p>
-                  <div id="location-button">
-                    <button
-                      id="geo-button"
-                      class="btn btn-outline-success my-2 my-sm-0"
-                      type="click"
-                    >
-                      Get Your Current Location
-                    </button>
-                  </div>
-                  <p class="card-text">
-                    <small id="text-muted"></small>
-                  </p>
-                </div>
-              </div>
+                src="http://openweathermap.org/img/wn/10d@2x.png"
+                id="main-icon"
+                alt="weather-icon"
+              />
+              90°C | °F
             </div>
-          </div>
-        </div>
+            <div class="col-6">
+                <ul>
+                    <li>Precipitation: 0%</li>
+                    <li>Humidity: 0%</li>
+                    <li>Wind: 9km/hr</li>
+                </ul>
+            </div>
+            </div class="row">
+        </div></td>
+       
       </header>
+    </tr>
+    </table>
       <!-- END CARD HEADER-->
       <br />
       <!--START WEEKDAY CARD ROW 1-->
@@ -113,6 +105,7 @@
             </div>
           </div>
         </div>
+        <!-- END MONDAY-->
         <!--TUESDAY-->
         <div class="col">
           <div class="card-main" style="width: 18rem">
