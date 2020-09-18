@@ -21,6 +21,7 @@ function displayTemperature(response) {
     "alt",
     `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`
   );
+  celsiusTemperature = response.data.main.temp;
 }
 /// END CONNECTION TO API ///
 /// START SEARCH ENGINE ///
@@ -35,15 +36,28 @@ function handleSubmit(event) {
   let cityInputElement = document.querySelector("#search-text");
   search(cityInputElement.value);
 }
-
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", handleSubmit);
 /// END SEARCH ENGINE ///
-
+/// START UNIT CONVERSION ///
+function displayFarenheitTemp(event) {
+  event.preventDefault();
+  let farenheitTemp = (celsiusTemperature * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#weather-temperature");
+  temperatureElement.innerHTML = Math.round(farenheitTemp);
+}
+/// END UNIT CONVERSION ///
 /// START HOROSCOPE ///
 
 /// END HOROSCOPE ///
+/// START GLOBAL CALLS///
+let celsiusTemperature = null;
 
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+let farenheitLink = document.querySelector("#units-f");
+farenheitLink.addEventListener("click", displayFarenheitTemp);
+/// END GLOBAL CALLS///
+/// END DEFINED FUNCTIONS AND CALLS ///
 /// DATE SCRIPT ///
 let now = new Date();
 
