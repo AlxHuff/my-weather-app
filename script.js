@@ -22,19 +22,27 @@ function displayTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`
   );
 }
-let apiKey = "36616c1d79a2b7725ac3053f800c78b3";
-let city = "San Diego";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-axios.get(apiUrl).then(displayTemperature);
-/// START CONNECTION TO API ///
-
+/// END CONNECTION TO API ///
 /// START SEARCH ENGINE ///
+function search(city) {
+  let apiKey = "36616c1d79a2b7725ac3053f800c78b3";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
 
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#search-text");
+  search(cityInputElement.value);
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
 /// END SEARCH ENGINE ///
 
-/// START COORDINATES BUTTON ///
+/// START HOROSCOPE ///
 
-/// END COORDINATES BUTTON ///
+/// END HOROSCOPE ///
 
 /// DATE SCRIPT ///
 let now = new Date();
