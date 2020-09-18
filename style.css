@@ -59,7 +59,7 @@ a {
 }
 
 button:hover {
-  background-color: #e24b1e !important;
+  background-color: tomato !important;
   color: whitesmoke !important;
 }
 
@@ -101,7 +101,7 @@ td.header-card {
 #nav-bar-logo {
   color: rgba(255, 255, 255, 0.9) !important;
   font-size: 30px !important;
-  text-decoration: solid #e24b1e line-through;
+  text-decoration: solid tomato line-through;
 }
 
 #search-text {
@@ -111,7 +111,7 @@ td.header-card {
 }
 
 #searchbar-button {
-  border: 1px solid #e24b1e !important;
+  border: 1px solid tomato !important;
   color: whitesmoke !important;
 }
 
@@ -156,23 +156,40 @@ span#weather-temperature {
   top: -32px;
 }
 
+.active {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.inactive {
+  color: rgba(255, 255, 255, 0.4);
+}
+
 #units-f {
   font-size: 18px;
   display: inline;
-  color: rgba(255, 255, 255, 0.9);
   position: relative;
   top: 0px;
+  text-decoration: none;
 }
+
 #units-c {
   font-size: 18px;
   display: inline;
-  color: rgba(255, 255, 255, 0.9);
   position: relative;
   top: 0px;
+  text-decoration: none;
+}
+
+#units-c:hover {
+  color: tomato;
+}
+
+#units-f:hover {
+  color: tomato;
 }
 
 #main-icon {
-  color: #e24b1e;
+  color: tomato;
   margin: 0 auto;
   padding-bottom: 20px;
 }
@@ -191,7 +208,7 @@ span#weather-temperature {
 }
 
 #geo-button {
-  border: 1px solid #e24b1e;
+  border: 1px solid tomato;
   color: whitesmoke !important;
 }
 

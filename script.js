@@ -43,12 +43,20 @@ function displayFarenheitTemp(event) {
   let farenheitTemp = (celsiusTemperature * 9) / 5 + 32;
   let temperatureElement = document.querySelector("#weather-temperature");
   temperatureElement.innerHTML = Math.round(farenheitTemp);
+  celsiusLink.classList.remove("active");
+  farenheitLink.classList.add("active");
+  celsiusLink.classList.add("inactive");
+  farenheitLink.classList.remove("inactive");
 }
 
 function displayCelsiusTemp(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#weather-temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  celsiusLink.classList.add("active");
+  farenheitLink.classList.remove("active");
+  celsiusLink.classList.remove("inactive");
+  farenheitLink.classList.add("inactive");
 }
 /// END UNIT CONVERSION ///
 /// START HOROSCOPE ///
