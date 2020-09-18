@@ -22,6 +22,7 @@ li {
   font-weight: 100;
   line-height: 19px;
   text-align: center;
+  text-transform: capitalize;
 }
 
 h1 {
@@ -71,7 +72,7 @@ td#horoscope-card {
   margin-top: 10px;
 }
 
-p.horoscope-p {
+#horoscope-p {
   color: rgba(255, 255, 255, 0.7);
   font-size: 12px;
   margin: 0 auto;
@@ -133,29 +134,37 @@ td.header-card {
 
 div.clearfix {
   text-align: center;
+  display: block;
   margin: 0 auto;
   max-height: 120px;
   max-width: 500px;
+  margin-right: 15px;
 }
 
 span#weather-temperature {
-  font-size: 70px;
+  font-size: 65px;
   color: rgba(255, 255, 255, 0.9);
+  text-align: left;
+  margin-right: 8px;
 }
 
-span.units {
-  font-size: 20px;
+.units {
+  font-size: 18px;
   display: inline;
+  color: rgba(255, 255, 255, 0.9);
+  position: relative;
+  top: -32px;
 }
 
 #units-f {
-  font-size: 20px;
-  margin-right: 10px;
+  font-size: 18px;
   display: inline;
+  color: rgba(255, 255, 255, 0.9);
+  position: relative;
+  top: 0px;
 }
 
 #main-icon {
-  font-size: 100px;
   color: #e24b1e;
   margin: 0 auto;
   padding-bottom: 20px;
