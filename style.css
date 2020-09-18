@@ -163,6 +163,13 @@ span#weather-temperature {
   position: relative;
   top: 0px;
 }
+#units-c {
+  font-size: 18px;
+  display: inline;
+  color: rgba(255, 255, 255, 0.9);
+  position: relative;
+  top: 0px;
+}
 
 #main-icon {
   color: #e24b1e;

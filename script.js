@@ -44,18 +44,25 @@ function displayFarenheitTemp(event) {
   let temperatureElement = document.querySelector("#weather-temperature");
   temperatureElement.innerHTML = Math.round(farenheitTemp);
 }
+
+function displayCelsiusTemp(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#weather-temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
 /// END UNIT CONVERSION ///
 /// START HOROSCOPE ///
 
 /// END HOROSCOPE ///
 /// START GLOBAL CALLS///
 let celsiusTemperature = null;
-
 let form = document.querySelector("#search-form");
-form.addEventListener("submit", handleSubmit);
-
 let farenheitLink = document.querySelector("#units-f");
+let celsiusLink = document.querySelector("#units-c");
+
+form.addEventListener("submit", handleSubmit);
 farenheitLink.addEventListener("click", displayFarenheitTemp);
+celsiusLink.addEventListener("click", displayCelsiusTemp);
 /// END GLOBAL CALLS///
 /// END DEFINED FUNCTIONS AND CALLS ///
 /// DATE SCRIPT ///
