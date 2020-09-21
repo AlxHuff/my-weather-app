@@ -27,7 +27,7 @@ li {
 
 h1 {
   color: rgba(255, 255, 255, 0.8);
-  font-size: 34px;
+  font-size: 40px;
   font-weight: 400;
   text-align: left;
   margin: 0 auto;
@@ -63,11 +63,25 @@ button:hover {
   color: whitesmoke !important;
 }
 
+div.row {
+  padding: 10px;
+}
+
 .column {
   margin: auto;
   text-align: left;
   max-width: 500px;
   flex: 50%;
+}
+
+#left {
+  margin: auto;
+  margin-top: 20px;
+}
+
+#right {
+  display: block;
+  margin: auto;
 }
 
 #date-time {
@@ -79,7 +93,6 @@ button:hover {
   font-size: 12px;
   margin: 0 auto;
   padding: 0px;
-  padding-right: 50px;
 }
 
 td.header-card {
@@ -118,13 +131,14 @@ td.header-card {
 }
 
 .main-card {
-  min-width: 300px;
+  min-width: 500px;
   max-width: 500px;
   border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 50px;
+  border-radius: 20px;
   padding: 20px;
   margin: auto;
   display: inline-block;
+  margin-top: 20px;
 }
 
 #city-name {
@@ -224,12 +238,14 @@ span#weather-temperature {
 .card-body {
   border: 1px solid rgba(255, 255, 255, 0.4);
   max-width: 150px;
-  border-radius: 50px;
+  min-width: 150px;
+  border-radius: 20px;
   background: transparent;
   color: #6c757d;
   text-align: center;
   padding: 10px;
   margin: auto;
+  display: block;
   margin-right: 10px;
   margin-top: 10px;
 }
