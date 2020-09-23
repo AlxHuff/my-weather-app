@@ -29,6 +29,10 @@ function search(city) {
   let apiKey = "36616c1d79a2b7725ac3053f800c78b3";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
+
+  /// START FORECAST URL CALL HERE ///
+  let apiUrlF = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrlF).then(displayForecast);
 }
 
 function handleSubmit(event) {
@@ -37,6 +41,31 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 /// END SEARCH ENGINE ///
+/// START FORECAST ///
+function displayForecast(response) {
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = null;
+  let forecast = null;
+
+  for (let index = 0; index < 6; index++) {
+    forecast = response.data.list[index];
+    forecastElement.innerHTML += ` 
+    <div class="card-body">
+    <h2 class="card-text">${formatHours(forecast.dt + 1000)}</h2>
+    <br>
+    <img src="http://openweathermap.org/img/wn/${
+      forecast.weather[0].icon
+    }@2x.png"
+    id="main-icon-small"
+    alt="weather-icon"/>
+    <h3 class="card-text-sub">${Math.round(
+      forecast.main.temp_max
+    )}° | ${Math.round(forecast.main.temp_min)}°</h3>
+    </div>`;
+  }
+}
+/// END FORECAST ///
+
 /// START UNIT CONVERSION ///
 function displayFarenheitTemp(event) {
   event.preventDefault();
@@ -62,6 +91,7 @@ function displayCelsiusTemp(event) {
 /// START HOROSCOPE ///
 
 /// END HOROSCOPE ///
+
 /// START GLOBAL CALLS///
 let celsiusTemperature = null;
 let form = document.querySelector("#search-form");
@@ -75,14 +105,15 @@ celsiusLink.addEventListener("click", displayCelsiusTemp);
 /// END DEFINED FUNCTIONS AND CALLS ///
 /// DATE SCRIPT ///
 let now = new Date();
-
 let h2 = document.querySelector("h2");
-
 let hours = now.getHours();
 let minutes = now.getMinutes();
-
 let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 let day = days[now.getDay()];
 
 h2.innerHTML = `${day}, ${hours}:${minutes}`;
+
+function formatHours(timestamp) {
+  return `${hours}:${minutes}`;
+}
 /// END DATE SCRIPT ///
