@@ -22,6 +22,8 @@ function displayTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`
   );
   celsiusTemperature = response.data.main.temp;
+  let mainDate = document.querySelector("h2");
+  mainDate.innerHTML = formatDate(response.data.dt + 1000);
 }
 /// END CONNECTION TO API ///
 /// START SEARCH ENGINE ///
@@ -49,8 +51,7 @@ function displayForecast(response) {
 
   for (let index = 0; index < 6; index++) {
     forecast = response.data.list[index];
-    forecastElement.innerHTML += ` 
-    <div class="card-body">
+    forecastElement.innerHTML += `<div class="card-body">
     <h2 class="card-text">${formatHours(forecast.dt + 1000)}</h2>
     <br>
     <img src="http://openweathermap.org/img/wn/${
@@ -89,7 +90,6 @@ function displayCelsiusTemp(event) {
 }
 /// END UNIT CONVERSION ///
 /// START HOROSCOPE ///
-
 /// END HOROSCOPE ///
 
 /// START GLOBAL CALLS///
@@ -104,16 +104,31 @@ celsiusLink.addEventListener("click", displayCelsiusTemp);
 /// END GLOBAL CALLS///
 /// END DEFINED FUNCTIONS AND CALLS ///
 /// DATE SCRIPT ///
-let now = new Date();
-let h2 = document.querySelector("h2");
-let hours = now.getHours();
-let minutes = now.getMinutes();
-let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-let day = days[now.getDay()];
-
-h2.innerHTML = `${day}, ${hours}:${minutes}`;
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let day = days[date.getDay()];
+  return `${day} ${hours}:${minutes}`;
+}
 
 function formatHours(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
   return `${hours}:${minutes}`;
 }
 /// END DATE SCRIPT ///
