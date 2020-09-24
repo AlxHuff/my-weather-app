@@ -23,7 +23,7 @@ function displayTemperature(response) {
   );
   celsiusTemperature = response.data.main.temp;
   let mainDate = document.querySelector("h2");
-  mainDate.innerHTML = formatDate(response.data.dt + 1000);
+  mainDate.innerHTML = formatDate(response.data.dt * 1000);
 }
 /// END CONNECTION TO API ///
 /// START SEARCH ENGINE ///
@@ -52,8 +52,7 @@ function displayForecast(response) {
   for (let index = 0; index < 6; index++) {
     forecast = response.data.list[index];
     forecastElement.innerHTML += `<div class="card-body">
-    <h2 class="card-text">${formatHours(forecast.dt + 1000)}</h2>
-    <br>
+    <h2 class="card-text">${formatHours(forecast.dt * 1000)}</h2>
     <img src="http://openweathermap.org/img/wn/${
       forecast.weather[0].icon
     }@2x.png"
